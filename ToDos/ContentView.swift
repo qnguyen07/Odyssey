@@ -28,6 +28,7 @@ extension SortOption {
 struct ContentView: View {
     
     @Environment(\.modelContext) private var modelContext
+    
     @Query private var items: [Item]
     
     @State private var searchQuery = ""
@@ -38,6 +39,9 @@ struct ContentView: View {
     @State private var isImageViewerPresented = false
     
     @State private var selectedSortOption = SortOption.allCases.first!
+    
+    @State var isImagePickerShowing = false
+    @State var selectedImage: UIImage?
     
     var filteredItems: [Item] {
         

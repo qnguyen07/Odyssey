@@ -18,6 +18,12 @@ struct CreateTodoView: View {
     @State var item = Item()
     @State var selectedCategory: Category?
     @State var selectedPhoto: PhotosPickerItem?
+    
+    @State var isImagePickerShowing = false
+    @State var selectedImage: UIImage?
+    
+    @State private var sourceType: UIImagePickerController.SourceType = .photoLibrary
+    
     var body: some View {
         List {
             
@@ -71,6 +77,14 @@ struct CreateTodoView: View {
                              photoLibrary: .shared()) {
                     Label("Add Image", systemImage: "photo")
                 }
+                
+                Button("Take a picture"){
+                    self.sourceType = .camera
+                    self.isImagePickerShowing.toggle()
+                }
+                
+                
+                
                 
                 if item.image != nil {
                     
