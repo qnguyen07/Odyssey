@@ -14,13 +14,7 @@ struct TodoView: View {
     var body: some View {
         VStack(alignment: .leading) {
             
-            if item.isCritical {
-                Image(systemName: "exclamationmark.3")
-                    .symbolVariant(.fill)
-                    .foregroundColor(.red)
-                    .font(.largeTitle)
-                    .bold()
-            }
+            
 
             Text(item.title)
                 .font(.largeTitle)

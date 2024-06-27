@@ -4,10 +4,8 @@
 //
 //  Created by Tunde Adegoroye on 08/06/2023.
 //
-
 import SwiftUI
 import SwiftData
-
 @Model
 class Category {
     
@@ -20,18 +18,16 @@ class Category {
         self.title = title
     }
 }
-
 extension Category {
     
     static var defaults: [Category] {
         [
-            .init(title: "🙇🏾‍♂️ Study"),
-            .init(title: "🤝 Routine"),
-            .init(title: "🏠 Family")
+            .init(title: "Food"),
+            .init(title: "Beach"),
+            .init(title: "Landmark")
         ]
     }
 }
-
 struct CreateCategoryView: View {
     
     @Environment(\.dismiss) private var dismiss
@@ -79,7 +75,6 @@ struct CreateCategoryView: View {
                     }
                 }
                 
-
             }
             
         }

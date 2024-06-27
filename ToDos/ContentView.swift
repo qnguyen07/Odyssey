@@ -4,17 +4,14 @@
 //
 //  Created by Tunde Adegoroye on 06/06/2023.
 //
-
 import SwiftUI
 import SwiftData
 import SwiftUIImageViewer
-
 enum SortOption: String, CaseIterable {
     case title
     case date
     case category
 }
-
 extension SortOption {
     
     var systemImage: String {
@@ -28,7 +25,6 @@ extension SortOption {
         }
     }
 }
-
 struct ContentView: View {
     
     @Environment(\.modelContext) private var modelContext
@@ -96,18 +92,7 @@ struct ContentView: View {
                             
                             Spacer()
                             
-                            Button {
-                                withAnimation {
-                                    item.isCompleted.toggle()
-                                }
-                            } label: {
-                                
-                                Image(systemName: "checkmark")
-                                    .symbolVariant(.circle.fill)
-                                    .foregroundStyle(item.isCompleted ? .green : .gray)
-                                    .font(.largeTitle)
-                            }
-                            .buttonStyle(.plain)
+//
                         }
                             if let selectedPhotoData = item.image,
                                let uiImage = UIImage(data: selectedPhotoData) {
@@ -160,10 +145,10 @@ struct ContentView: View {
                     }
                 }
             }
-            .navigationTitle("My To Do List")
+            .navigationTitle("California")
             .animation(/*@START_MENU_TOKEN@*/.easeIn/*@END_MENU_TOKEN@*/, value: filteredItems)
             .searchable(text: $searchQuery,
-                        prompt: "Search for a to do or a category")
+                        prompt: "Search for a destination or a category")
             .overlay {
                 if filteredItems.isEmpty {
                     ContentUnavailableView.search
@@ -227,7 +212,7 @@ struct ContentView: View {
                 Button(action: {
                     showCreateToDo.toggle()
                 }, label: {
-                    Label("New ToDo", systemImage: "plus")
+                    Label("New", systemImage: "plus")
                         .bold()
                         .font(.title2)
                         .padding(8)
@@ -248,7 +233,6 @@ struct ContentView: View {
         }
     }
 }
-
 private extension [Item] {
     
     func sort(on option: SortOption) -> [Item] {

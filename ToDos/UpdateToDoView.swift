@@ -5,10 +5,11 @@
 //  Created by Tunde Adegoroye on 08/06/2023.
 //
 
+
+
 import SwiftUI
 import SwiftData
 import PhotosUI
-
 class OriginalToDo {
     var title: String
     var timestamp: Date
@@ -20,7 +21,6 @@ class OriginalToDo {
         self.isCritical = item.isCritical
     }
 }
-
 struct UpdateToDoView: View {
     
     @Environment(\.dismiss) var dismiss
@@ -29,9 +29,7 @@ struct UpdateToDoView: View {
     
     @State var selectedCategory: Category?
     @State var selectedPhoto: PhotosPickerItem?
-
     @Bindable var item: Item
-
     var body: some View {
         List {
             
@@ -42,7 +40,6 @@ struct UpdateToDoView: View {
             Section("General") {
                 DatePicker("Choose a date",
                            selection: $item.timestamp)
-                Toggle("Important?", isOn: $item.isCritical)
             }
             
             
@@ -71,7 +68,6 @@ struct UpdateToDoView: View {
                     .pickerStyle(.inline)
                 }
                 
-
             }
             
             Section {
@@ -112,7 +108,7 @@ struct UpdateToDoView: View {
                 }
             }
         }
-        .navigationTitle("Update ToDo")
+        .navigationTitle("Update Item")
         .onAppear(perform: {
             selectedCategory = item.category
         })

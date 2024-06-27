@@ -8,7 +8,6 @@
 import SwiftUI
 import SwiftData
 import PhotosUI
-
 struct CreateTodoView: View {
     
     @Environment(\.modelContext) var modelContext
@@ -19,18 +18,17 @@ struct CreateTodoView: View {
     @State var item = Item()
     @State var selectedCategory: Category?
     @State var selectedPhoto: PhotosPickerItem?
-
     var body: some View {
         List {
             
-            Section("To do title") {
+            Section("Destination Title") {
                 TextField("Name", text: $item.title)
             }
             
             Section("General") {
                 DatePicker("Choose a date",
                            selection: $item.timestamp)
-                Toggle("Important?", isOn: $item.isCritical)
+                
             }
             
             Section("Select A Category") {
@@ -56,7 +54,6 @@ struct CreateTodoView: View {
                     .pickerStyle(.inline)
                 }
                 
-
             }
             
             Section {
@@ -90,16 +87,14 @@ struct CreateTodoView: View {
  
             }
             
-
             Section {
                 Button("Create") {
                     save()
                     dismiss()
                 }
             }
-
         }
-        .navigationTitle("Create ToDo")
+        .navigationTitle("Create Destination")
         .toolbar {
             
             ToolbarItem(placement: .cancellationAction) {
@@ -123,7 +118,6 @@ struct CreateTodoView: View {
         }
     }
 }
-
 private extension CreateTodoView {
     
     func save() {
@@ -132,7 +126,21 @@ private extension CreateTodoView {
         selectedCategory?.items?.append(item)
     }
 }
-//
+
+///
+///
+///
+
+
+
+
+
+
+
+
+
+
+
 // Xcode 15 Beta 2 has a previews bug so this is why we're commenting this out...
 // Ref: https://mastodon.social/@denisdepalatis/110561280521551715
 #Preview {
