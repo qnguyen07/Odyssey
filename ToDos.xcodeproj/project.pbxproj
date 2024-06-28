@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD02B82A2C2F2B7500C808D7 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD02B8292C2F2B7500C808D7 /* Quiz.swift */; };
 		BD49B2D62C2DF9D8008AE406 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49B2D52C2DF9D8008AE406 /* SecondView.swift */; };
 		BD49B2D82C2DF9FB008AE406 /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49B2D72C2DF9FB008AE406 /* ThirdView.swift */; };
 		BD49B2DA2C2DFA12008AE406 /* FourthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49B2D92C2DFA12008AE406 /* FourthView.swift */; };
 		BD49B2DC2C2DFA43008AE406 /* FifthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49B2DB2C2DFA43008AE406 /* FifthView.swift */; };
-		BD49B2DE2C2DFA95008AE406 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49B2DD2C2DFA95008AE406 /* Content.swift */; };
 		BD49B2E02C2DFECB008AE406 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49B2DF2C2DFECB008AE406 /* ImagePicker.swift */; };
 		E7325DC82A2F839400130DAE /* ToDosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7325DC72A2F839400130DAE /* ToDosApp.swift */; };
 		E7325DCA2A2F839400130DAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7325DC92A2F839400130DAE /* ContentView.swift */; };
@@ -29,11 +29,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD02B8292C2F2B7500C808D7 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		BD49B2D52C2DF9D8008AE406 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		BD49B2D72C2DF9FB008AE406 /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
 		BD49B2D92C2DFA12008AE406 /* FourthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthView.swift; sourceTree = "<group>"; };
 		BD49B2DB2C2DFA43008AE406 /* FifthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthView.swift; sourceTree = "<group>"; };
-		BD49B2DD2C2DFA95008AE406 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		BD49B2DF2C2DFECB008AE406 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		E7325DC42A2F839400130DAE /* ToDos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7325DC72A2F839400130DAE /* ToDosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDosApp.swift; sourceTree = "<group>"; };
@@ -86,9 +86,9 @@
 				BD49B2D72C2DF9FB008AE406 /* ThirdView.swift */,
 				BD49B2D92C2DFA12008AE406 /* FourthView.swift */,
 				BD49B2DB2C2DFA43008AE406 /* FifthView.swift */,
+				BD02B8292C2F2B7500C808D7 /* Quiz.swift */,
 				BD49B2DF2C2DFECB008AE406 /* ImagePicker.swift */,
 				E7325DC92A2F839400130DAE /* ContentView.swift */,
-				BD49B2DD2C2DFA95008AE406 /* Content.swift */,
 				E7325DD92A2F8A9C00130DAE /* TodoView.swift */,
 				E7325DCB2A2F839500130DAE /* Assets.xcassets */,
 				E7325DD02A2F839500130DAE /* Item.swift */,
@@ -197,11 +197,11 @@
 				BD49B2D62C2DF9D8008AE406 /* SecondView.swift in Sources */,
 				E79BE2CB2A3259F5002AFC0C /* UpdateToDoView.swift in Sources */,
 				BD49B2D82C2DF9FB008AE406 /* ThirdView.swift in Sources */,
-				BD49B2DE2C2DFA95008AE406 /* Content.swift in Sources */,
 				E7325DD12A2F839500130DAE /* Item.swift in Sources */,
 				BD49B2DA2C2DFA12008AE406 /* FourthView.swift in Sources */,
 				BD49B2E02C2DFECB008AE406 /* ImagePicker.swift in Sources */,
 				BD49B2DC2C2DFA43008AE406 /* FifthView.swift in Sources */,
+				BD02B82A2C2F2B7500C808D7 /* Quiz.swift in Sources */,
 				E7325DC82A2F839400130DAE /* ToDosApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

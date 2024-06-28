@@ -32,7 +32,7 @@ struct SecondView: View {
                     buttonPressed()
                 }) {
                     Menu {
-                        NavigationLink(destination: Content()) {
+                        NavigationLink(destination: ContentView()) {
                             Button(action: { }) {
                                 Text("Home")
                             }
@@ -75,10 +75,9 @@ struct SecondView: View {
                     }
                 
                 ForEach(circles, id: \.id) { wrappedPoint in
-                    Circle()
-                        .fill(Color.black)
-                        .frame(width: 100, height: 100)
-                        .position(wrappedPoint.point)
+                    Image("hbflower")
+                        .frame(width: 25, height: 25)
+                        
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)

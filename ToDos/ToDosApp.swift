@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 @main
-  mstruct ToDosApp: App {
+struct ToDosApp: App {
 
     @AppStorage("isFirstTimeLaunch") private var isFirstTimeLaunch: Bool = true
     
