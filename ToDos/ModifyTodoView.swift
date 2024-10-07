@@ -26,6 +26,7 @@ struct CreateTodoView: View {
       Section("General") {
         DatePicker("Choose a date",
               selection: $item.timestamp)
+      
       }
       Section("") {
         if categories.isEmpty {
@@ -72,6 +73,8 @@ struct CreateTodoView: View {
         Button("Take a picture"){
           self.sourceType = .camera
           self.isImagePickerShowing.toggle()
+            
+            
         }
         if item.image != nil {
           Button(role: .destructive) {

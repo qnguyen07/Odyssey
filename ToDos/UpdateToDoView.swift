@@ -93,6 +93,7 @@ struct UpdateToDoView: View {
                         withAnimation {
                             selectedPhoto = nil
                             item.image = nil
+                            
                         }
                     } label: {
                         Label("Remove Image", systemImage: "xmark")

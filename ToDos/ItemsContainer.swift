@@ -9,7 +9,6 @@ import Foundation
 import SwiftData
 
 actor ItemsContainer {
-    
     @MainActor
     static func create(shouldCreateDefaults: inout Bool) -> ModelContainer {
         let schema = Schema([Item.self])
@@ -25,8 +24,6 @@ actor ItemsContainer {
                 }
             }
         }
-
         return container
     }
-    
 }

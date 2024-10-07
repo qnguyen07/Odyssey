@@ -26,11 +26,11 @@ struct ThirdView: View {
                       Text("Home")
                     }
                   }
-                  NavigationLink(destination: SecondView()) {
+                    /*NavigationLink(destination: SecondView(item: <#Binding<Item>#>, stampData: <#StampData#>)) {
                     Button(action: { }) {
                       Text("Your Passport")
                     }
-                  }
+                  }*/
                   NavigationLink(destination: FourthView()) {
                     Button(action: { }) {
                       Text("Your Rankings")

@@ -36,19 +36,19 @@ struct ContentView: View {
   @State var isImagePickerShowing = false
   @State var selectedImage: UIImage?
   @State var selectedPhoto: UIImage?
-  var filteredItems: [Item] {
-    if searchQuery.isEmpty {
-      return items.sort(on: selectedSortOption)
+    var filteredItems: [Item] {
+      if searchQuery.isEmpty {
+        return items.sort(on: selectedSortOption)
+      }
+      let filteredItems = items.compactMap { item in
+        let titleContainsQuery = item.title.range(of: searchQuery,
+                             options: .caseInsensitive) != nil
+        let categoryTitleContainsQuery = item.category?.title.range(of: searchQuery,
+                                      options: .caseInsensitive) != nil
+        return (titleContainsQuery || categoryTitleContainsQuery) ? item : nil
+      }
+      return filteredItems.sort(on: selectedSortOption)
     }
-    let filteredItems = items.compactMap { item in
-      let titleContainsQuery = item.title.range(of: searchQuery,
-                           options: .caseInsensitive) != nil
-      let categoryTitleContainsQuery = item.category?.title.range(of: searchQuery,
-                                    options: .caseInsensitive) != nil
-      return (titleContainsQuery || categoryTitleContainsQuery) ? item : nil
-    }
-    return filteredItems.sort(on: selectedSortOption)
-  }
   var body: some View {
     NavigationStack{
       ZStack {
