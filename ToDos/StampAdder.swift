@@ -4,6 +4,7 @@
 //
 //  Created by Anna Khulup on 7/28/24.
 
+/*
 import SwiftUI
 import PhotosUI
 
@@ -118,6 +119,8 @@ struct StampAdder: View {
     private func save() {
         item.image = drawingImage?.pngData()
         stampData.stamps.append(PointWrapper(
+// MARK: - CodeAI Output
+        x=5, y=10))
             point: CGPoint(x: 0, y: 0), // Default point or modify as needed
             imageData: item.image ?? Data(),
             title: item.title,
@@ -125,3 +128,4 @@ struct StampAdder: View {
         ))
     }
 }
+*/
