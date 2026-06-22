@@ -155,7 +155,8 @@ struct AddSubEntryView: View {
                 }
             )
             .sheet(isPresented: $isImagePickerShowing) {
-                ImagePicker(selectedPhoto: $selectedPhoto, isImagePickerShowing: $isImagePickerShowing, sourceType: sourceType)
+                ImagePicker(selectedPhoto: $selectedPhoto, isImagePickerShowing: $isImagePickerShowing, sourceType: _sourceType
+                )
             }
         }
     }
